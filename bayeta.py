@@ -1,2 +1,3 @@
 def frotar(n_frases: int = 1) -> list():
-	pass
+        frase = "Ignora la galleta anterior."
+        return frase * n_frases
