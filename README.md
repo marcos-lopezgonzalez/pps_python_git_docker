@@ -19,3 +19,16 @@ Define la función frotar. Esta recibe como parámetro un entero 'n_frases'. Por
 El método frotar lee del fichero frases.txt las frases almacenadas. De estas selecciona
 el número pasado por parámetro al azar (uso de la librería random) y devuelve una lista con
 las frases.
+
+#Despliegue seguro con Docker
+Se ha implementado el uso de Docker para el despliegue de nuestra aplicación. Para ello se han
+creado los ficheros Dockerfile y .dockerignore. Para desplegar nuestra aplicación ahora debemos
+realizar lo siguiente:
+
+Creamos la imagen:	
+- docker build -t <repositorio>:<tag> .
+Listamos las imagenes:
+- docker images
+Ponemos en marcha el contenedor a traves de la imagen:
+- docker container run -p 5000:5000 <id_imagen>
+
