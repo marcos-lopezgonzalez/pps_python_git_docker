@@ -16,6 +16,12 @@ El método frotar lee del fichero frases.txt las frases almacenadas. De estas se
 el número pasado por parámetro al azar (uso de la librería random) y devuelve una lista con
 las frases.
 
+prueba_mongo.py
+Archivo en el que se proporcionan las herramientes para la conexión con la base de datos MongoDB.
+Contiene un método de instanciación, para inicializar la colección de la base de datos en caso de 
+que esté vacía (usa las frases de 'frases.txt'), para borrar la coleccióm y para obtener un número
+de frases de la colección mediante una consulta.
+
 Pasos:
 - Creamos un entorno virtual con 'python3 -m venv <nombre_entorno>' (En mi caso 'bayeta')
   Tener en cuenta el fichero requirements.txt para la resolución de dependencias.
