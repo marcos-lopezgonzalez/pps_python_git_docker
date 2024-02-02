@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app_bayeta:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      red_bayeta:
+        ipv4_address: 100.0.0.2
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      red_bayeta:
+        ipv4_address: 100.0.0.3
+
+networks:
+  red_bayeta:
+    ipam:
+      driver: default
+      config:
+        - subnet: 100.0.0.0/24

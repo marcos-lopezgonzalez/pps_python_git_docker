@@ -56,3 +56,9 @@ Ahora que ya tenemos nuestros dos contenedores funcionando y dentro de una misma
 que ya mencioné anteriormente. Por ejemplo:
 - curl http://127.0.0.1:5000 nos devolverá la cadena 'Hola, mundo'
 - curl http://127.0.0.1:5000/frotar/n, donde 'n' es un número entero, nos devolverá 'n' frases aleatorias.
+
+Despliegue con Docker-Compose:
+Para realizar un despliegue más eficaz y sencillo de la apliación se ha implementado docker-compose. De esta forma nos ahorramos tener
+que ejecutar todos los comandos mencionados anteriormente cada vez que se quiera iniciar la apliación. Para ello se ha creado el fichero
+'docker-compose.yml'. Con el siguiente comando levantamos los dos contenedores:
+- docker compose up
