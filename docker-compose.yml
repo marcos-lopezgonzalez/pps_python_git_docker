@@ -18,6 +18,8 @@ services:
     networks:
       red_bayeta:
         ipv4_address: 100.0.0.3
+    volumes:
+      - volumen_mongo:/data/db
 
 networks:
   red_bayeta:
@@ -25,3 +27,6 @@ networks:
       driver: default
       config:
         - subnet: 100.0.0.0/24
+
+volumes:
+  volumen_mongo:
