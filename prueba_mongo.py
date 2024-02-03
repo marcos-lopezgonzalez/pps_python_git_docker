@@ -31,5 +31,17 @@ def consultar(n_frases: int = 1):
     # Obtenemos una cantidad n_frases de frases
     frases = coleccion.aggregate([{'$sample': {'size': n_frases}}])
     # No es necesario cerrar la conexión, ya que cuando se pare el contenedor esto se hará automáticamente.
-    #cerrar_conexion()
+    # cerrar_conexion()
     return list(frases)
+
+def insertar_frases(lista_frases: list):
+    try:
+        coleccion = instanciar()
+        coleccion.insert_many([{"frase": frase} for frase in lista_frases])
+        # Inserción realizada
+        return True
+    except Exception as e:
+        print(f"Error al insertar las frases: {e}")
+        # Error en la inserción
+        return False
+
