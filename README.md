@@ -4,10 +4,11 @@ Bayeta de la Fortuna”. Cada vez que accedamos a la web, nos dirá un
 texto auspicioso aleatorio.
 
 app.py
-Este archivo crea una aplicación web mediante la librería Flask. Esta apliación tiene 2 endpoints.
+Este archivo crea una aplicación web mediante la librería Flask. Esta apliación tiene 3 endpoints.
 Se encuentra alojada en la dirección 127.0.0.1:5000. Para acceder en el navegador ponemos 'http://127.0.0.1:5000'
 El endpoint raíz '/' muestra la cadena 'Hola, mundo'.
 El endpoint '/frotar/n' devuelve un número n de frases de la galleta de la fortuna.
+El endpoint 'frotar/add' nos permite añadir nuevas frases.
 Implementa los métodos de bayeta.py.
 
 bayeta.py
@@ -56,6 +57,7 @@ Ahora que ya tenemos nuestros dos contenedores funcionando y dentro de una misma
 que ya mencioné anteriormente. Por ejemplo:
 - curl http://127.0.0.1:5000 nos devolverá la cadena 'Hola, mundo'
 - curl http://127.0.0.1:5000/frotar/n, donde 'n' es un número entero, nos devolverá 'n' frases aleatorias.
+- Para la solicitud POST recomiendo usar un cliente REST (como Postman) para facilitar la inserción de datos.
 
 Despliegue con Docker-Compose:
 
